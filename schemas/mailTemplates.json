@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "id": "uri://registries/mailtemplates#",
+    "table": "mailtemplates",
+    "title": "mailtemplates",
+    "_security": {
+        "_create": {
+            "_static": [
+                "Registry - write"
+            ]
+        },
+        "_read": {
+            "_static": [
+                "Registry - read"
+            ]
+        },
+        "_modify": {
+            "_static": [
+                "Registry - write"
+            ]
+        }
+    },
+    "listFields": [
+        {
+            "field": "baseData.name",
+            "title": "Nazov vzoru"
+        }
+    ],
+    "properties": {
+        "baseData": {
+            "title": "Základné údaje",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "title": "Názov vzoru",
+                    "xxtransCode": "schema.org.name",
+                    "type": "string",
+                    "required": true
+                },
+              
+                "subjectTemplate": {
+                    "title": "Predmet",
+                    "xxtransCode": "schema.org.birthDate",
+                    "type": "string",
+                    "required": false
+                },
+              
+                "textTemplate": {
+                    "title": "Text" ,
+                    "xxtransCode": "schema.org.birthDate",
+                    "type": "string",
+                    "required": false
+                },
+              
+                "htmlTemplate": {
+                    "title": "Html",
+                    "xxtransCode": "schema.org.birthDate",
+                    "type": "string",
+                    "required": false
+                }
+            }
+        }
+        
+    }
+}
